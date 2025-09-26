@@ -10,7 +10,7 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Home | ScapeSync',
+  title: 'Home | Scape-Sync',
   description:
     'Your all-in-one platform for job scheduling, employee management, and client service built to keep your business running smoothly from anywhere.',
 };

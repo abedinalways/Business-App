@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 ScapeSyne
 
-## Getting Started
+🔗 **Live Demo:** [https://scape-sync-beryl.vercel.app/](https://scape-sync-beryl.vercel.app/)
 
-First, run the development server:
+---
+
+## ✨ Features
+
+### Landing Page
+- Pixel-perfect **Figma clone** using Next.js & TailwindCSS.  
+- Fully responsive design with modern UI animations.  
+- Navbar dynamically updates based on authentication state (Get Started / Logout / User account).  
+
+### Authentication System
+- **Register** with email and OTP verification.  
+- **Login** with JWT token storage.  
+- **Forgot Password** → verify OTP → reset new password → success.  
+- **Logout** updates the navbar dynamically.  
+
+### User Flow
+1. User clicks **Get Started** in navbar.  
+2. Registers an account → verifies email → success screen.  
+3. Logs in → dashboard/business view.  
+4. Can reset password if forgotten.  
+5. Logout → navbar updates to show **Get Started** again.  
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js 15 + React  
+- **Styling:** Tailwind CSS + daisyUI  
+- **State & Hooks:** useState, useEffect  
+- **API Integration:** Fetch with JWT-based authentication  
+- **Notifications:** React Hot Toast  
+- **Deployment:** Vercel  
+
+---
+
+## 📂 Folder Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+│   ├── pic/ (images & assets)
+│   └── *.svg / *.png
+├── README.md
+│   ├── app/
+│   │   ├── (auth)/              # Authentication routes
+│   │   │   ├── Register/        # Register & Verify pages
+│   │   │   ├── Login/           # Login page
+│   │   │   ├── ForgotPass/      # Forgot + Verify + Update pages
+│   │   │   ├── UpdatePassword/  # Reset password flow
+│   │   │   └── layout.tsx
+│   │   ├── (Identification)/    # User role & identification
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   └── page.tsx             # Landing page
+│   ├── Components/
+│   │   ├── authentication/      # Auth forms & OTP verify components
+│   │   ├── layout/              # Navbar, Footer
+│   │   └── sections/            # Landing page sections (Banner, Features, FAQ, etc.)
+├── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/scapesyne.git
+cd scapesyne
+```
 
-## Learn More
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3️⃣ Run Development Server
+```bash
+npm run dev
+```
+App will be running at `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4️⃣ Build for Production
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔑 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env.local` file:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_API_BASE_URL=https://apitest.softvencefsd.xyz/api
+```
+
+---
+
+## 📌 Roadmap
+
+- [x] Figma → Landing page clone  
+- [x] Full authentication flow with Postman-tested APIs  
+- [x] Navbar dynamic state (login/logout)  
+- [ ] Business account features (future scope)  
+- [ ] Dashboard pages (future scope)  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome. Please open an issue or pull request for major changes.
+
+---
+
+## 📜 License
+
+This project is licensed under **MIT License**.
+
