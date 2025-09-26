@@ -1,4 +1,4 @@
-# 🌐 ScapeSyne
+# 🌐 Scape-Syne
 
 🔗 **Live Demo:** [https://scape-sync-beryl.vercel.app/](https://scape-sync-beryl.vercel.app/)
 
